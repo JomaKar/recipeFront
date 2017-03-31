@@ -1,0 +1,21 @@
+<div class="container">
+	<form (ngSubmit)="onSubmit()" #addIngredientForm="ngForm">
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input required type="text" class="form-control" id="name" name="name" [(ngModel)]="newIngredient.name">
+		</div>
+		<div class="form-group">
+			<label for="price">Price</label>
+			<input required type="number" class="form-control" id="price" name="price" [(ngModel)]="newIngredient.price">
+		</div>
+		<div class="form-group">
+			<label for="amount_price">Selling Unit</label>
+			<input required type="text" class="form-control" id="amount_price" name="amount_price" [(ngModel)]="newIngredient.amount_price">
+		</div>
+		<div class="form-group">
+			<label for="imgPath">Image</label>
+			<input required type="text" class="form-control" id="imgPath" name="imgPath" [(ngModel)]="newIngredient.imgPath" #inputRef>
+		</div>
+	<button type="submit" class="btn btn-success" [disabled]="!addIngredientForm.form.valid">Submit</button>
+	</form>
+</div>

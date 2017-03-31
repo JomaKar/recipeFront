@@ -1,0 +1,8 @@
+<p *ngIf="!activeSearch && noFoundedIngredients">No hubieron ingredientes que coincidieran con su búsqueda <a routerLink="/ingredients" >Add new</a> </p>
+<ul class="ingredientesList" *ngIf="!activeSearch">
+	<ingredient-list-item *ngFor="let ing of ingredients" [ingredient]="ing" (click)="clickSelection(ing)"></ingredient-list-item>
+</ul>
+
+<ul class="ingredientesList" *ngIf="activeSearch">
+	<ingredient-list-item *ngFor="let ing of foundedIngredients" [ingredient]="ing" (click)="clickSelection(ing)"></ingredient-list-item>
+</ul>

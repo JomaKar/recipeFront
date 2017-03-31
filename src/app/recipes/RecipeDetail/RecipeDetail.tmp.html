@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img src="{{theRecipe?.imgPath}}" [ngStyle]="{margin: 'auto'}" class="img-responsive">
+    <button (click)="iLikeIt(theRecipe)">Like</button>
+    Likes : {{theRecipe?.popularity}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{theRecipe?.name}}</h1>
+  </div>
+  <div class="col-xs-12">
+    <button class="btn btn-success" (click)="toShoppingList()" >To Shopping List</button>
+    <a class="btn btn-primary" routerLink="edit" >Edit</a>
+    <a class="btn btn-danger" routerLink="delete">Delete</a>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <p>{{theRecipe?.description}}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    Ingredients:
+    <br>
+    <ul class="list-group">
+    	<li class="list-group-item" *ngFor="let el of theRecipe?.ingredients">
+    		{{el.ingredient.name}} : {{el.amount}} {{el.ingredient.amount_price}}
+    	</li>
+    </ul>
+  </div>
+</div>

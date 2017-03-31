@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-xs-10">
+    <add-to-shopping></add-to-shopping>
+    <hr>
+    <ul class="list-group" *ngIf="ingredientsAvailable.length > 0">
+      <a *ngFor="let el of ingredientsAvailable" class="list-group-item" style="cursor: pointer"> {{el.ingredient.name}} ({{el.amount}}) </a>
+    </ul>
+  </div>
+</div>

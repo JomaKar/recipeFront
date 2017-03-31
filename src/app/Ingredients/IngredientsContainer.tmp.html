@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="col-md-12">
+		<h2>Add a new Ingredient</h2>
+		<add-ingredients></add-ingredients>
+	</div>
+	<div class="col-sm-5">
+		<h2>Available Ingredients</h2>
+		
+		<search-box></search-box>
+
+		<p *ngIf="noIngredients"> No hay ingredientes para mostrar</p>
+		
+		<ingredients-list (areNoIngredients)="noIngredients = $event" (selectingIngredient)="passingSelection($event)"></ingredients-list>
+	</div>
+	<div class="col-sm-7">
+		<ingredient-detail [theIng]="selectedIngredient"></ingredient-detail>
+	</div>
+</div>

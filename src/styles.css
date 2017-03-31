@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+
+.searchBoxInput{
+  width: 100%; 
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding-left: 5px;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.form-group .ingredientesList{
+  max-height: 150px;
+}
+
+.listOfRecipeIngredients{
+    padding: 10px 0 0 10px;
+}
+
+.ingredientOfRecipeItem{
+    max-width: 320px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #beffe7;
+    border-radius: 5px;
+    height: 32px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.infoIngredient{
+    color: red;
+    font-weight: 300;
+    width: 100px;
+    display: inline-block;
+}
+
+.ingredientOfRecipeItem div input{
+  width: 60px;
+  border-radius: 5px;
+  border: 1px solid #cecece;
+  text-align: center;
+}
+
+.buttonCancel{
+  cursor: pointer;
+  color: orangered;
+}
+
+.ingredientesList{
+	max-height: 350px;
+    overflow-y: scroll;
+    margin-top: 20px;
+    border: 1px solid;
+    padding: 15px;
+}
+
+.igredientListItem{
+	display: flex;
+	justify-content: space-between;
+	background-color: #DAF1FF;
+  cursor: pointer;
+}
+
+.igredientListItem .addSymbol{
+    display: none;
+}
+
+.form-group .ingredientesList .igredientListItem .addSymbol{
+    display: block;
+}
+
+.addSymbol .plusIcon{
+  display: block;
+  font-size: 20px;
+  color: red;
+}
+
+.addSymbol .textPlus{
+  display: none;
+}
+
+.addSymbol:hover .textPlus{
+  display: block;
+}
+
+.addSymbol:hover .plusIcon{
+  display: none;
+}

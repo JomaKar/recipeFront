@@ -1,0 +1,17 @@
+<div>
+	<h1>Welcome to  the Recipes App</h1>
+
+
+	<h2>where there's not need to cry if you want to eat delicious</h2>
+
+</div>
+
+
+<p>Top recipes</p>
+<div class="row">
+	<div class="col-xs-12">
+		<ul class="list-group">
+		  <recipe-item (click)="recipeSelection(aRecipe)" *ngFor="let aRecipe of recipes" [recipe]="aRecipe"></recipe-item>
+		</ul>
+	</div>
+</div>

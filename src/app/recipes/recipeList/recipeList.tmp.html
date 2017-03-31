@@ -1,0 +1,7 @@
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <recipe-item (click)="navigateToSelection(aRecipe.id)" *ngFor="let aRecipe of recipes" [recipe]="aRecipe" ></recipe-item>
+    </ul>
+  </div>
+</div>

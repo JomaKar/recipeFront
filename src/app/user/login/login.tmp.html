@@ -1,0 +1,9 @@
+<label for="idNum">Id</label>
+<input type="number" name="idNum" #idNum id="idNum">
+<br>
+<button (click)="goToUser(idNum.value)">Go</button>
+<br>
+<label for="txtInput">Msg</label>
+<input type="text" name="txtInput" #txtInput id="txtInput">
+<br>
+<button (click)="goFake(txtInput.value)">Go</button>
